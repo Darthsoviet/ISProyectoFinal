@@ -1,8 +1,0 @@
-{
-  "name": "backend",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "sh deploy.sh"
-  }
-}

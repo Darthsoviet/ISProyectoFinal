@@ -1,0 +1,25 @@
+@import "../../scss/styles.scss";
+
+button{
+   background-color: transparent;
+   height: 100%;
+   font-family: sans-serif;
+   font-size: 1em;
+   width: 100%;
+   background-color: $background-grey-dark;
+   text-transform: capitalize;
+   color: $font_light;
+   border: none;
+   transition: all .5s;
+   &:active{
+      border: 1px solid $border-grey;
+      outline: none;
+   }
+
+   &:hover{
+      height: 102.5%;
+      margin-top: 1.5%;
+      font-size: larger;
+      box-shadow: 2px 2px 2px black;
+   }
+}

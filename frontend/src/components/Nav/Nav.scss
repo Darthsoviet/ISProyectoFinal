@@ -1,0 +1,12 @@
+@import "../../scss/styles.scss";
+
+nav{
+   background-color: $background-grey-dark;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   color: $font-light;
+   height: 8vh;
+   width: 60%;
+}

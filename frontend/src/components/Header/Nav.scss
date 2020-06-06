@@ -1,0 +1,74 @@
+@import "../../scss/styles.scss";
+
+nav.escritorio {
+  
+      background-color: $background-grey-dark;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-evenly;
+      color: $font-light;
+      height: 8vh;
+      width: 30%;
+   
+}
+
+nav.movil {
+   display: none;
+}
+
+button.movil {
+   display: none;
+}
+
+@media screen and (max-width:800px) {
+   button.movil {
+      background-color: transparent;
+      border: none;
+      display: block;
+      outline: none;
+      width: 10%;
+
+      svg {
+         font-size: large;
+         color: white;
+      }
+
+   }
+
+   nav.movil {
+      transition: all 0.4s;
+      background-color: $background-grey-dark;
+      overflow: hidden;
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      border-bottom: 1px solid;
+      color: $font-light;
+      margin-top: 8vh;
+      height: 0;
+      width: 100vw;
+      border: none;
+
+      button {
+         border-top: 2px solid $border-primary;
+
+         &:last-child {
+            border-bottom: 3px solid $border-primary;
+         }
+
+         &:hover {
+            height: inherit;
+            margin-top: initial;
+         }
+
+      }
+   }
+
+   nav.escritorio {
+      display: none;
+   }
+
+}

@@ -37,6 +37,7 @@ button.movil {
    }
 
    nav.movil {
+      
       transition: all 0.4s;
       background-color: $background-grey-dark;
       overflow: hidden;
@@ -53,10 +54,9 @@ button.movil {
       border: none;
 
       button {
-         border-top: 2px solid $border-primary;
 
          &:last-child {
-            border-bottom: 3px solid $border-primary;
+            border-bottom: 2px solid $border-primary;
          }
 
          &:hover {

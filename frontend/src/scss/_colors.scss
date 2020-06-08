@@ -3,7 +3,7 @@ $primary-light: #F0EBD8;
 $primary-grey: #3E5C76;
 $primary-dark-light:#1D2D44;
 $primary-dark:#0D1321;
-
+$dark:#15212b;
 $font-primary:$primary;
 $font-light:#fff;
 $font-grey: $primary-grey;
@@ -17,5 +17,6 @@ $border-dark: $primary-dark;
 $background-light: #fff;
 $background-grey-dark: $primary-dark;
 $background-dark-light: $primary-dark-light;
+$background-dark: $dark;
 
 $danger: #e0245e;

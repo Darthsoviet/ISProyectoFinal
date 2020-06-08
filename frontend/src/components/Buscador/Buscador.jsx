@@ -16,16 +16,16 @@ const handleOnSubmit=(event)=>{
    send(text);
    
    event.preventDefault();
-   event.currentTarget.reset() ;
+   event.target.reset() ;
    setText("")
    
 }
 
    return (
       <form  onSubmit={handleOnSubmit} className="contenedor-buscador">
-         <button type="submit" ><FontAwesomeIcon icon={faSearch}/></button>
+         <button  type="submit" ><FontAwesomeIcon icon={faSearch}/></button>
          <input  onChange={handleOnChange}
-          placeholder={"Buscar Sistema Operativo"} type="text"/>
+          placeholder={"Buscar Sistema Operativo"} type="search" />
       </form>
    );
 }

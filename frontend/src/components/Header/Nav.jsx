@@ -31,9 +31,9 @@ const Nav = (props) => {
    return (
       <>
          <nav className="escritorio">
-            {(listaBotones.map((boton, i) => {
+            { listaBotones.map((boton, i) => {
                return <BotonesNavegacion key={i} boton={boton} />
-            }))}
+            })}
          </nav>
          <button onClick={()=>toggleNav(visible)} id="boton-nav" className="movil"><FontAwesomeIcon icon={faBars}/></button>
          <nav id="nav-movil" className="movil">

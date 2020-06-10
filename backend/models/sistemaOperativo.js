@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var sistemaOperativoSchema = Schema({
+var SistemaOperativoSchema = Schema({
   id: Number,
   nombre: String,
   arquitectura: String,
@@ -11,4 +11,4 @@ var sistemaOperativoSchema = Schema({
   multitareas: Boolean,
 });
 
-module.exports = mongoose.model('SistemaOperativo', sistemaOperativoSchema);
+module.exports = mongoose.model('Sistema', SistemaOperativoSchema);

@@ -31,5 +31,7 @@ app.use('/', require('./routes/index'));
 
 app.use('/api/v1',require('./routes/sistemasOperativos'));
 
+app.use('/api/v1/delete',require('./routes/sistemaOperativoDelete'));
+
 
 module.exports = app;

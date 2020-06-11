@@ -10,7 +10,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color:  $background-dark;
 }
-
+#root{
+  display: grid;
+  grid-template-rows: 8vh minmax(92vh,92vh);
+  
+}
+.grid{
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: minmax(92vh,92vh);
+  max-height: 92vh;
+}
+section{
+  max-height: 92vh;
+  
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+  
+  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

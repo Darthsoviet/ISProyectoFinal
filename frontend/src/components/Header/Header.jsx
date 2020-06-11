@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from "./Nav";
 import "./Header.scss"
 import Buscador from "../Buscador";
 
@@ -11,7 +10,7 @@ icono svg, nombre string, ruta string
 */
 const Header = (props) => {
 
-const {titulo,logo,listaBotones} =props.header;
+const {titulo,logo} =props.header;
 
 
 const send=(texto)=>{
@@ -20,7 +19,6 @@ const send=(texto)=>{
 
    return (
       <header>
-         <Nav botones={listaBotones}/>
          <Buscador send={send}></Buscador>
          <h1>{titulo}</h1>
          <img src={logo} alt={titulo}/>

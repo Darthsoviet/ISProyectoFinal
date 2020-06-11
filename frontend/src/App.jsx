@@ -5,6 +5,7 @@ import logo from "./assets/imagenes/test.png";
 import { faHome, faLaptopCode,  faPen, faFileCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Switch, Route } from 'react-router';
+import ListaCards from "./components/listaCards";
 
 
 
@@ -34,7 +35,7 @@ function App() {
             <Nav botones={listaBotones} />
             <section>
               <Route exact path="/" render={() => { }} />
-              <Route exact path="/sistemasOperativos" render={() => { }} />
+              <Route exact path="/sistemasOperativos" render={() => { return( <ListaCards/>)}} />
               <Route exact path="/insertar" render={() => { }} />
               <Route exact path="/documentacion" render={() => { }} />
             </section>

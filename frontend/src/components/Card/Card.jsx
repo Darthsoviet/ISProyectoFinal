@@ -9,10 +9,10 @@ export default function Card(props) {
            <span></span>
            <div className="content">
               <h3>{nombre}</h3>
-                <p>{arquitectura}</p>
-                <p>{multiUsuario}</p>
-                <p>{kernel}</p>
-                <p>{multiTareas}</p>
+                <p>arquitectura: {arquitectura}</p>
+                <p>multiusuario:{multiUsuario}</p>
+                <p>version de kernel:{kernel}</p>
+                <p>multi tares: {multiTareas}</p>
                 <h2>{licencia}</h2>
            </div>
         </li>

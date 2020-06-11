@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from "./components/Header"
 import Nav from "./components/Navegacion"
-import logo from "./assets/imagenes/test.png";
+import logo from "./assets/imagenes/EscudoUNAM.png";
 import { faHome, faLaptopCode,  faPen, faFileCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Switch, Route } from 'react-router';
-import ListaCards from "./components/listaCards";
+import ListaCards from "./components/ListaCards";
 
 
 

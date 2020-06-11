@@ -2,7 +2,7 @@ import React from 'react';
 import "./Card.scss";
 
 export default function Card(props) {
-    let {nombre ,arquitectura, multiUsuario , kernel, multiTareas, licencia } = props;
+    let {nombre ,arquitectura, multiUsuario , kernel, multiTareas, licencia ,id} = props.so;
     return (
        
         <li className="box">
@@ -13,7 +13,7 @@ export default function Card(props) {
                 <p>{multiUsuario}</p>
                 <p>{kernel}</p>
                 <p>{multiTareas}</p>
-                <p>{licencia}</p>
+                <h2>{licencia}</h2>
            </div>
         </li>
      

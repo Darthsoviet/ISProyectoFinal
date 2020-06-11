@@ -4,4 +4,7 @@
 ul{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr 1fr;
+   position: relative;
+   gap: 1em;
+   row-gap: 4em;
 }

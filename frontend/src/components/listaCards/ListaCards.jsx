@@ -6,7 +6,8 @@ const ListaCards = () => {
    return (
       
       <ul>
-         <Card></Card>
+         <Card so={{nombre:"Ubuntu" ,arquitectura:"test", multiUsuario:true , kernel:"Linux", multiTareas:true, licencia:"GPL" }}/>
+      
 
       </ul>
    );

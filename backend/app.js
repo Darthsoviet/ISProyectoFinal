@@ -33,4 +33,8 @@ app.use('/api/v1',require('./routes/sistemasOperativos'));
 
 app.use('/api/v1/get',require('./routes/metGet'));
 
+app.use('/api/v1/delete',require('./routes/sistemaOperativoDelete'));
+
+app.use('/api/v1/get',require('./routes/sistemaOperativoMatch'));
+
 module.exports = app;

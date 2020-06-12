@@ -37,4 +37,7 @@ app.use('/api/v1/delete',require('./routes/sistemaOperativoDelete'));
 
 app.use('/api/v1/get',require('./routes/sistemaOperativoMatch'));
 
+app.use('/api/v1/post', require('./routes/post'));
+
+
 module.exports = app;

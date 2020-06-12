@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 router.get('/patch/:id', async (req, res, next) => {
   const { id } = req.params;
   const sistema = Sistema.findById(id);
-  
+
   // En esta sección del código se renderiza la página que contenga el formulario de actulización del documento
   /*res.render('AQUI VA NOMBRE VIEW'){
     sistema
@@ -37,5 +37,8 @@ router.post('/update/:id', async (req, res, next) => {
 });
 
 // Fin patch - Nieto
+
+
+
 
 module.exports = router;

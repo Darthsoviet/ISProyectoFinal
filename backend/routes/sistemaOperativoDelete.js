@@ -8,7 +8,7 @@ router.delete('/sistemasOperativos',(requisito,respuesta,siguiente)=>{
 });
 
 router.delete('/sistemasOperativos/:idSO',(requisito,respuesta,siguiente)=>{
-    Sistema.findOneAndDelete({id:requisito.params.idSO},(error,informacion)=>{
+    Sistema.findOneAndDelete({_id:requisito.params.idSO},(error,informacion)=>{
         if (informacion==null) respuesta.status(404).json({Error:"No existe el 'id' que deseas eliminar"});
         //if (error) respuesta.status(404).json({Advertencia:"No exite el 'id' que buscas"});
         else respuesta.status(200).json(informacion);

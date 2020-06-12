@@ -19,9 +19,10 @@ moongose.connect(URL,{useUnifiedTopology: true, useNewUrlParser: true} ).then(()
 
 
 var app = express();
-app.use(cors())
-
+app.use(cors());
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 
 // carga las rutas estaticas de react
 

@@ -3,7 +3,9 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Sistema = require('../models/sistemaOperativo');
 
-router.post('/update', (req, res, next)=>{
+router.post('/', (req, res, next)=>{
+  console.log(req.body);
+
   var sisOpe = Sistema({
     id: req.body.id,
     nombre: req.body.nombre,
@@ -13,7 +15,6 @@ router.post('/update', (req, res, next)=>{
     multiusuario: req.body.multiusuario,
     multitareas: req.body.multitareas
   });
-  console.log(req.body);
   sisOpe.save((err, data) =>{
 
     if (err){

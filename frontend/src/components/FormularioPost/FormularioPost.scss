@@ -1,0 +1,56 @@
+@import "../../scss/styles.scss";
+
+.form-post {
+   margin: 1% auto;
+   width:auto;
+   display: block;
+
+   div.form-post-container {
+      position: relative;
+      margin: auto;
+      padding: 4%;
+      display: flex;
+      width: 50%;
+      height: auto;
+      background-color: $background-dark-light;
+      flex-direction: column;
+
+      span.form-b{
+         position: absolute;
+         background: linear-gradient(90deg,#cd37ff,#03004f);
+         display: block;
+         top:-2px;
+         bottom:-2px;
+         right:-2px;
+         left:-2px;
+         z-index: -1;
+         transform: skew(2deg,2deg);
+      }
+   }
+
+   label {
+      display: block;
+      margin: 1rem;
+      color: white;
+   }
+   input[type="checkbox"]{
+      display: inline;
+   }
+   input {
+      text-align: center;
+      color: white;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $border-light;
+   }
+   button{
+      margin:  8% 0 0 0;
+      background-color: $success;
+      border: none;
+      border-radius: 10px;
+      color: white;
+
+   }
+
+}

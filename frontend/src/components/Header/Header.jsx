@@ -9,17 +9,15 @@ lista botones donde cada boon contiene
 icono svg, nombre string, ruta string
 */
 const Header = (props) => {
-
+let {setLista}=props;
 const {titulo,logo} =props.header;
 
 
-const send=(texto)=>{
-   alert(texto)
-}
+
 
    return (
       <header>
-         <Buscador send={send}></Buscador>
+         <Buscador setLista={setLista}></Buscador>
          <h1>{titulo}</h1>
          <img src={logo} alt={titulo}/>
       </header>

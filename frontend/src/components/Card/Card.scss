@@ -13,28 +13,55 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
- }
- .box:nth-child(odd) span{
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background:  linear-gradient(-315deg,#42ff42,#aa55ff);
-    z-index: -1;
-    transform: skew(2deg,2deg);
- }
- .box:nth-child(even) span{
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background:  linear-gradient(-315deg,#ff0011,#ffbb44);
-    z-index: -1;
-    transform: skew(2deg,2deg);
+
+    .btn-eliminar{
+       background-color: $danger;
+       position: absolute;
+       top: 0%;
+       left: 0%;
+       border: none;
+       outline: none;
+       color: white;
+       display: none;
+       border-radius: 3%;
+       width: 35%;
+       cursor: pointer;
+    }
+    .btn-update{
+      background-color: transparent;
+      font-size: large;
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      border: none;
+      outline: none;
+      color: white;
+      display: none;
+      border-radius: 3%;
+      cursor: pointer;
+   }
+    &:hover{
+       .btn-eliminar{
+          display: block;
+       }
+       .btn-update{
+          display: block;
+       }
+
+    }
+    span{
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background:  linear-gradient(-315deg,#0f00ff,#7733cf);
+      z-index: -1;
+      transform: skew(2deg,2deg);
+   }
  }
 
+ 
  .box .content {
     position: absolute;
     padding: 20px;

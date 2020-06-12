@@ -24,7 +24,7 @@ router.get('/patch/', (req, res, next) => {
   res.status(405).json({Aviso:"Error.Necesitas especificar el 'id' del Sistema Operativo que deseas modificar "})
 });
 
-router.post('/update/:id', async (req, res, next) => {
+router.patch('/update/:id', async (req, res, next) => {
   const { id } = req.params;
   await Sistema.updateOne({ _id: id }, req.body, (err, info) => {
     if (err) res.status(404).json({ Aviso: "Error. No se ha podido modificar el documento" });

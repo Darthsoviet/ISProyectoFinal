@@ -37,7 +37,7 @@ let {history}=props;
 
   useEffect(()=>{
     if(seleccionados.length>=1){
-      setEstiloEliminar({display:"block",
+      setEstiloEliminar({display:"flex",
     color:"#e0245e"})
     }else{
       setEstiloEliminar({display:"none"})

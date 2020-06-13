@@ -9,9 +9,19 @@ export async function getSO(url, signal) {
 }
 
 export async function deleteSO(url, id, signal) {
-   await fetch(`http://${url}/api/v1/delete/sistemasOperativos/${id}`, {
+   await fetch(`http://${url}/api/v1/delete/sistemasOperativos/individual/${id}`, {
       method: "DELETE",
       signal: signal
+   })
+
+}
+export async function deleteSOMany(url,list) {
+   await fetch(`http://${url}/api/v1/delete/sistemasOperativos/multiple`, {
+      method: "DELETE",
+      body: JSON.stringify({"lista":list}),
+      headers:{
+         "Content-Type":"application/json"
+      }
    })
 
 }

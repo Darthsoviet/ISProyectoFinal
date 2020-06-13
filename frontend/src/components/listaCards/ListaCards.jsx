@@ -9,7 +9,8 @@ import { URL } from "../../js/URL"
 const ListaCards = (props) => {
    const [style, setStyle] = useState({
       display: "none",
-      position: "absolute"
+      position: "absolute",
+      width:"80%"
 
    })
    const [sistema, setSistema] = useState({

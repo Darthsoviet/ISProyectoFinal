@@ -7,11 +7,11 @@
 
    div.form-post-container {
       position: relative;
-      margin: auto;
+      margin: auto ;
       padding: 4%;
       display: flex;
       width: 50%;
-      height: auto;
+      height: auto ;
       background-color: $background-dark-light;
       flex-direction: column;
 
@@ -58,13 +58,15 @@
    }
    button{
       width: 25%;
-      height: 2rem;
+      height: 1.5rem;
       margin:  1rem auto;
       background-color: $success;
       border: none;
       border-radius: 3px;
       color: white;
-
+      &:hover{
+         filter: brightness(140%);
+      }
    }
 
 }

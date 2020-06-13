@@ -3,7 +3,7 @@ import "./Formulario.scss";
 import { URL } from "../../js/URL";
 
 const FormularioPost = (props) => {
-   let { setLista, so, accion,id } = props;
+   let { setLista, accion,id,so } = props;
 
    const [data, setData] = useState(
       {
@@ -16,10 +16,9 @@ const FormularioPost = (props) => {
 
 
       })
+     
    useLayoutEffect(() => {
-      if(so===undefined){
-         so=data
-      }
+     if(so!==undefined){
       setData({
          nombre: so.nombre ,
          arquitectura: so.arquitectura  ,
@@ -27,8 +26,7 @@ const FormularioPost = (props) => {
          multitareas: so.multitareas,
          versionKernel: so.versionKernel,
          licencia: so.licencia }
-      )
-      console.log(so);
+      )}
    },[so])
 
    const handleOnChange = (event) => {
@@ -80,7 +78,7 @@ const FormularioPost = (props) => {
             <input onChange={handleOnChange} name="nombre" id="nombre" required maxLength={45} type="text"  value={data.nombre} />
 
             <label htmlFor="arquitectura">Arquitectura</label>
-            <input onChange={handleOnChange} name="arquitectura" id="arquitectura" required maxLength={45} type="text" value={data.arquitectura} />
+            <input onChange={handleOnChange} name="arquitectura" id="arquitectura"  maxLength={45} type="text" value={data.arquitectura} />
 
             <label htmlFor="multitareas">es multiTarea</label>
             <input onChange={handleOnChecked} name="multitareas" id="multitareas" type="checkbox" checked={data.multitareas?true:false}  />
@@ -92,7 +90,7 @@ const FormularioPost = (props) => {
             <input onChange={handleOnChange} name="licencia" id="licencia" maxLength={45} type="text" value={data.licencia} />
             <label htmlFor="versionKernel">kernel</label>
 
-            <input onChange={handleOnChange} name="versionKernel" id="versionKernel" required maxLength={45} type="text" value={data.versionKernel}  />
+            <input onChange={handleOnChange} name="versionKernel" id="versionKernel"  maxLength={45} type="text" value={data.versionKernel}  />
             <button type="submit">Aceptar</button>
          </div>
       </form>

@@ -8,3 +8,19 @@ ul{
    gap: 1em;
    row-gap: 4em;
 }
+.cancel-btn-form{
+   background-color: $danger;
+   border: $danger 1px solid;
+   color: white;
+   font-size: larger;
+   position: relative;
+   left: 20%;
+
+}
+@media screen and (max-width:700px){
+   ul{
+      grid-template-columns: 1fr;
+   }
+   
+
+}

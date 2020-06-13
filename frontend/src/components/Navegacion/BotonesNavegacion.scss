@@ -20,18 +20,17 @@ button.nav {
    align-items: center;
    flex-flow: row;
    justify-content: center;
+   color: $font_grey;
 
    span {
 
       text-transform: capitalize;
-      color: $font_grey;
       width: 70%;
    }
 
    svg {
       width: auto;
       font-size: 1.5rem;
-      color: $font_grey;
       margin: 0 1rem;
    }
    .modal{

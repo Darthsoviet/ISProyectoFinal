@@ -4,12 +4,12 @@ import { withRouter } from "react-router";
 
 
 const BotonesNavegacion = withRouter((props) => {
-   const { history, comprimido } = props;
-   const { pagina, nombre, icono } = props.boton;
+   const {  comprimido } = props;
+   const { accion, nombre, icono,style } = props.boton;
 
 
    const handleOnClick = () => {
-      history.push(pagina)
+      accion()
    }
    const renderNombre = (comprimido) => {
       if (!comprimido) {
@@ -17,7 +17,7 @@ const BotonesNavegacion = withRouter((props) => {
       }
    }
    return (
-      <button className="nav" onClick={handleOnClick}>
+      <button style={style} className="nav" onClick={handleOnClick}>
          {renderNombre(comprimido)}
 
          {icono}

@@ -17,7 +17,8 @@
 
       span.form-b{
          position: absolute;
-         background: linear-gradient(90deg,#cd37ff,#03004f);
+         background: linear-gradient(90deg,#0f00ff,#7733cf,#bf47c0,#ff4460,#bf47c0,#0f00ff);
+         background-size: 300%;
          display: block;
          top:-2px;
          bottom:-2px;
@@ -25,6 +26,17 @@
          left:-2px;
          z-index: -1;
          transform: skew(2deg,2deg);
+         animation: animacion linear infinite 10s;
+      }
+      @keyframes animacion {
+         0%{
+            background-position: 0%;
+         }50%{
+            background-position: 150%;
+         }100%{
+            background-position: 300%;
+         }
+         
       }
    }
 
@@ -45,10 +57,12 @@
       border-bottom: 2px solid $border-light;
    }
    button{
-      margin:  8% 0 0 0;
+      width: 25%;
+      height: 2rem;
+      margin:  1rem auto;
       background-color: $success;
       border: none;
-      border-radius: 10px;
+      border-radius: 3px;
       color: white;
 
    }

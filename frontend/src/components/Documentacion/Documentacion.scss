@@ -1,0 +1,11 @@
+@import "../../scss/styles.scss";
+
+.doc-ul{
+   color: white;
+   display: flex;
+   flex-direction: column;
+   li{
+      padding: 3rem;
+   }
+   
+}

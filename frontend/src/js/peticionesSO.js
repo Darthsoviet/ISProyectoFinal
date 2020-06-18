@@ -1,5 +1,5 @@
 export async function getSO(url, signal) {
-   let res = await fetch(`http://${url}/api/v1/get/so`, {
+   let res = await fetch(`${url}/api/v1/get/so`, {
       signal: signal
    })
    let data = await res.json()
@@ -9,14 +9,14 @@ export async function getSO(url, signal) {
 }
 
 export async function deleteSO(url, id, signal) {
-   await fetch(`http://${url}/api/v1/delete/sistemasOperativos/individual/${id}`, {
+   await fetch(`${url}/api/v1/delete/sistemasOperativos/individual/${id}`, {
       method: "DELETE",
       signal: signal
    })
 
 }
 export async function deleteSOMany(url,list) {
-   await fetch(`http://${url}/api/v1/delete/sistemasOperativos/multiple`, {
+   await fetch(`${url}/api/v1/delete/sistemasOperativos/multiple`, {
       method: "DELETE",
       body: JSON.stringify({"lista":list}),
       headers:{
@@ -26,7 +26,7 @@ export async function deleteSOMany(url,list) {
 
 }
 export async function findByName(url, nombre) {
-   let res = await fetch(`http://${url}/api/v1/get/sistemasOperativos/nombre/${nombre}`)
+   let res = await fetch(`${url}/api/v1/get/sistemasOperativos/nombre/${nombre}`)
    let data = await res.json()
 
    return data
@@ -35,7 +35,7 @@ export async function findByName(url, nombre) {
 }
 
 export async function postSO(url, data) {
-   await fetch(`http://${url}/api/v1/post`, {
+   await fetch(`${url}/api/v1/post`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -47,7 +47,7 @@ export async function postSO(url, data) {
 }
 
 export async function patchSO(url, data, id) {
-   await fetch(`http://${url}/update/${id}`, {
+   await fetch(`${url}/api/v1/update/${id}`, {
       method: "PATCH",
       body: JSON.stringify(data),
       headers: {

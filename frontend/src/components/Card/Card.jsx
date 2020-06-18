@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useLayoutEffect } from 'react';
 import "./Card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
@@ -13,49 +13,16 @@ export default function Card(props) {
     const handleOnClickDelete = () => {
        
         if (!prepared) {
-            setStyle({ background: "red" })
 
             setSeleccionados(list => {
 
                 return [...list, _id]
 
             })
-
-
-
         } else  {
-            setStyle({ background: "blue" })
-            console.log("ejecutado");
             
             setSeleccionados(  list => {
-                let i=list.indexOf(_id)
-                console.log(i);
-                
-                
-                
-                
-                
-                //caso en el que el elemento es el primero en la lista
-                if (i === 0) {
-                    list.shift()
-                    
-                    let aux = [...list]
-
-                    return aux
-                } else if (list.length>1 && i===list.length-1) {
-                    list.pop()
-                    let aux=[...list]
-
-                    return  aux
-
-                } else if(i>=0) {
-                    list.splice(i, 1)
-                    let aux = [...list]
-                    return  aux;
-
-                }
-
-                return list
+                return list.filter((elemento)=> elemento!==_id)
 
             })
 
@@ -69,7 +36,7 @@ export default function Card(props) {
     const handleOnClickPatch = () => {
         setSistema({ ...props.so })
         setStyleForm((sty) => {
-            return { ...sty, "display": "block", "zIndex": 5 }
+            return { ...sty, "display": "block" }
         })
     }
 
@@ -77,8 +44,7 @@ export default function Card(props) {
         setPrepared(false)
     }, [setPrepared])
 
-    useEffect(() => {
-        console.log("seleccionados" +seleccionados);
+    useLayoutEffect(() => {
         
         if (seleccionados.includes(_id)) {
             setStyle({ background: "red" })

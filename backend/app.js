@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', require('./routes/index'));
+app.use('/api/v1', require('./routes/index'));
 
 app.use('/api/v1',require('./routes/sistemasOperativos'));
 
@@ -40,5 +40,8 @@ app.use('/api/v1/get',require('./routes/sistemaOperativoMatch'));
 
 app.use('/api/v1/post', require('./routes/sistemaOperativoPost'));
 
+app.get('*', function(req, res){
+   res.redirect("/")
+ });
 
 module.exports = app;

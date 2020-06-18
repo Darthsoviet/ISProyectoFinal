@@ -10,18 +10,7 @@ router.get('/so', function(req, res, next) {
   });
 });
 
-//obtener uno por id
-router.get('/so/:id',(req,res,next)=>{
-	SistemaOperativo.findOne({
-		'id':req.params.id
-	},(err,data)=>{
-		if(data == null){
-			res.status(404).json({mensaje:"No existe"});
-		}else{
-			res.status(200).json(data);
-		}
-	});
-});
+
 
 
 module.exports = router;

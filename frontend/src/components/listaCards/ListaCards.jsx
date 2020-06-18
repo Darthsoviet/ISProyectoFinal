@@ -7,10 +7,14 @@ import { URL } from "../../js/URL"
 
 
 const ListaCards = (props) => {
+
+   let { setLista, lista, setSeleccionados, seleccionados } = props;
+
    const [style, setStyle] = useState({
       display: "none",
       position: "absolute",
-      width:"80%"
+      width:"80%",
+      zIndex:"5"
 
    })
    const [sistema, setSistema] = useState({
@@ -21,7 +25,6 @@ const ListaCards = (props) => {
       multitareas:  false,
       versionKernel: "",
       licencia:  ""})
-   let { setLista, lista, setSeleccionados, seleccionados } = props;
 
    useEffect(() => {
       let abortController = new AbortController()
@@ -31,8 +34,6 @@ const ListaCards = (props) => {
          getSO(URL, signal).then(d => {
             data = d
             setLista(data)
-            console.log(data);
-
          })
       }
 
@@ -46,10 +47,6 @@ const ListaCards = (props) => {
    }
 
 
-   // const accion=()=>{
-   //    patchSO(URL,sistema,sistema._id)
-   // }
-
    return (
       <>
          <div style={style}>
@@ -58,9 +55,8 @@ const ListaCards = (props) => {
                hideForm()
                return patchSO(url,data,id)}} setLista={setLista} />
          </div>
+
          <ul>
-
-
             {lista.map((so, i) => {
                return (
                   <Card setSistema={setSistema} setStyleForm={setStyle} key={i} so={so} setLista={setLista} seleccionados={seleccionados} setSeleccionados={setSeleccionados} />
